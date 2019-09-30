@@ -3,5 +3,3 @@ Learning Python
 
 HI
 
-
-jjj
