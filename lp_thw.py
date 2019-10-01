@@ -232,10 +232,19 @@ def cheese_and_crackers(cheese_count, boxes_of_crackers):#this is a few ways to 
 
 def game_lib(steam, origin):
 
-      #print(f"There are {steam} steam games and {origin} origin games")
+      steam = input("What library first?:\n") #print(f"There are {steam} steam games and {origin} origin games")
+      origin = input("What library next?: \n")
 
-      steam = 10 
-      origin = 10
+      if steam == 'steam':
+            steam = input("How many steam games do you have?:\n")
+      else:
+            return
+      if origin == 'origin':
+
+            
+            origin = 10
+      else:
+            return
 
       print(f"There are {steam} steam games and {origin} origin games")
 
@@ -245,6 +254,8 @@ def game_lib(steam, origin):
 
 
 game_lib(10,10)
+
+
 
 
 
