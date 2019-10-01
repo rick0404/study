@@ -208,26 +208,44 @@ print_two_again("anime", "soul")
 print_one("First!")
 print_none()
 
-def cheese_and_crackers(cheese_count, boxes_of_crackers):
+def cheese_and_crackers(cheese_count, boxes_of_crackers):#this is a few ways to give values to some varaibles 
+
       print(f"You have {cheese_count} cheeses!")
       print(f"You have {boxes_of_crackers} boxes of crackers!")
       print("Get a blanket. \n")
 
       print("We can just give the function numbers directly:")
       cheese_and_crackers(20,30)
+ 
       print("Or, we can use variables from our script:")
-
       amount_of_cheese = 10
       amount_of_crackers = 50
       cheese_and_crackers(amount_of_cheese, amount_of_crackers)
 
       print("We can even do the math inside too:")
       cheese_and_crackers(10 + 20, 5 + 6)
-      
+
       print("And we can combine the two, variables and math:")
       cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
 
-cheese_and_crackers(10,10)
+#cheese_and_crackers(10,10)
+
+def game_lib(steam, origin):
+
+      #print(f"There are {steam} steam games and {origin} origin games")
+
+      steam = 10 
+      origin = 10
+
+      print(f"There are {steam} steam games and {origin} origin games")
+
+      games = steam + origin
+
+      print(f"A total of {games} games!")    
+
+
+game_lib(10,10)
+
 
 
 
