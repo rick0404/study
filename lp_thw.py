@@ -174,29 +174,38 @@ from sys import argv
 from sys import argv
 from os.path import exists #impoting somthing new to work with
 
-script, from_file, to_file = argv
+#script, from_file, to_file = argv
  
-print(f"Copying from {from_file} to {to_file}") #printing that i might be able to copy somthing to something else
+#print(f"Copying from {from_file} to {to_file}") #printing that i might be able to copy somthing to something else
 #what
-in_file = open(from_file) #in_file here is given to open my from_file, the first arg i give my script, ive been using new.txt
-indata = in_file.read() #even though i just assigned in_file to open my from_file i just passed it to indata and gave it read perms
-print(f"The input file is {len(indata)} bytes long") #using len to count characters in my from_file 
-print(f"Does the output file exist? {exists(to_file)}") #still not sure what exists does but i get it 
-print("Read, hit RETURN to continue, CRTL-C to abort")
-input()
-out_file  = open(to_file, 'w') #my out_file is the second arg i give my script, so whatever name i want it to be it'll be created, use .txt im opening it with write perms
-out_file.write(indata) #ok, i just told out_file to write whats in indata, remember indata was give to in_file.read() which is the first arg i run with my script
-print("Alright, all done")
-out_file.close() #closing
-in_file.close() #closing
+#in_file = open(from_file) #in_file here is given to open my from_file, the first arg i give my script, ive been using new.txt
+#indata = in_file.read() #even though i just assigned in_file to open my from_file i just passed it to indata and gave it read perms
+#print(f"The input file is {len(indata)} bytes long") #using len to count characters in my from_file 
+#print(f"Does the output file exist? {exists(to_file)}") #still not sure what exists does but i get it 
+#print("Read, hit RETURN to continue, CRTL-C to abort")
+#input()
+#out_file  = open(to_file, 'w') #my out_file is the second arg i give my script, so whatever name i want it to be it'll be created, use .txt im opening it with write perms
+#out_file.write(indata) #ok, i just told out_file to write whats in indata, remember indata was give to in_file.read() which is the first arg i run with my script
+#print("Alright, all done")
+#out_file.close() #closing
+#in_file.close() #closing
 
+def print_two(*args):
+      arg1, arg2 = args
+      print(f"arg1: {arg1}, arg2: {arg2}")
 
+def print_two_again(arg1, arg2):
+      print(f"arg1: {arg1}, arg2: {arg2}")
 
+def print_one(arg1):
+      print(f"arg1: {arg1}")
 
-
-
-
-
+def print_none():
+      print("I got nothin")
+print_two("anime", "soul")
+print_two_again("anime", "soul")
+print_one("First!")
+print_none()
 
 
 
