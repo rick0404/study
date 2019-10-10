@@ -52,7 +52,7 @@ print(f"So, you're {age} old, {height} tall and {weight}lbs.")
 def zay():
      x = input("Give me a number: ")
      y = input("Give me another number: ")
-     z = input("What do you want to do: ")
+     z = input("What do you want to do: 'add', 'subtract', 'multiply' or 'divide'\t\n")
      if z == 'add':
            print("You added", int(x) + int(y), "Nice!")
            if int(x) + int(y) > 100:
@@ -65,6 +65,8 @@ def zay():
            print("You multiplied", int(x) * int(y), "Nice!")
            if int(x) * int(y) > 1000000:
                  print("This number is huge!")
+           else:
+                  print("Number is kinda low!")
      elif z == 'divide':
            print("You divided", int(x) / int(y), "Nice!")
            if int(x) / int(y) < .0001:
@@ -228,27 +230,29 @@ def cheese_and_crackers(cheese_count, boxes_of_crackers):#this is a few ways to 
       print("And we can combine the two, variables and math:")
       cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
 
+
 #cheese_and_crackers(10,10)
 
 def game_lib(steam, origin):
 
       steam = input("What library first?:\n") #print(f"There are {steam} steam games and {origin} origin games")
+
       origin = input("What library next?: \n")
 
       if steam == 'steam':
             steam = input("How many steam games do you have?:\n")
       else:
-            return
-      if origin == 'origin':
+            print("Not a library!")
+            exit()
 
-            
-            origin = 10
+      if origin == 'origin':
+            origin = input("How many origin games do you have?:\n")
       else:
             return
 
       print(f"There are {steam} steam games and {origin} origin games")
 
-      games = steam + origin
+      games = int(steam) + int(origin) #converted this to an int even before book got there hehe
 
       print(f"A total of {games} games!")    
 
